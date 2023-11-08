@@ -5,13 +5,13 @@ import { useTodo } from "../Context/TodoContext";
 export default function InputComp() {
      const [todos, setTodos] = useState("")
      const {addTodo} = useTodo()
-        console.log(todos)
+      
      const add = (e) => {
         e.preventDefault()
 
         if(!todos) return
 
-        addTodo({todos: todos, completed: false})
+        addTodo({id: Date.now(), todo: todos, completed: false})
         setTodos("")
      }
 

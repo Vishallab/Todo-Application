@@ -15,7 +15,7 @@ import { createContext, useContext } from "react";
 })
 
  export const useTodo = () => {
-   return  useContext(TodoContext)
+   return useContext(TodoContext)
 }
 
 export const TodoProvider = TodoContext.Provider;

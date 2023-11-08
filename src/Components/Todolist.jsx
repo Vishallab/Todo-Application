@@ -6,7 +6,7 @@ export default function Todolist({todo}) {
     const [isEditable, setIsEditable] = useState(false)
     const [todoMsg, setTodoMsg] = useState(todo.todo)
     const {updateTodo, deleteTodo, toggleCompleted} = useTodo()
-    console.log(todo)
+ 
     
         const editTodo = () => {
             updateTodo(todo.id, {...todo, todo: todoMsg})
