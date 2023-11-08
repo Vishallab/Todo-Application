@@ -6,6 +6,22 @@ import { TodoProvider } from './Context/TodoContext'
 
 function App() {
   const [todo, setTodo] = useState([])
+  const [themeMode, setThemeMode] = useState("light");
+
+  const lightMode = () => {
+    setThemeMode("light");
+  }
+
+  
+  const darkMode = () => {
+    setThemeMode("dark");
+  }
+
+  useEffect(() => {
+    document.querySelector("html").classList.remove("light", "dark")
+    document.querySelector('html').classList.add(themeMode);
+  },[themeMode])
+
 
   const addTodo = (todo) => {
    setTodo((prevTodo) => [{id: Date.now(), ...todo}, ...prevTodo])
@@ -44,13 +60,13 @@ function App() {
     }, [todo])
 
   return (
-    <TodoProvider value={{todo, addTodo, updateTodo, deleteTodo, toggleCompleted}}>
+    <TodoProvider value={{todo, addTodo, updateTodo, deleteTodo, toggleCompleted, themeMode, lightMode, darkMode}}>
    <div className='w-full flex flex-wrap h-screen p-8'>
-       <div className='border-2 border-red-800 w-1/2'>
+       <div className=' w-1/2'>
         <InputComp/>
       </div>
 
-        <div className='border-2 border-red-800 w-1/2 pt-16'>
+        <div className='w-1/2 pt-16'>
            {
             todo.map((todo) => (
               <div key={todo.id}

@@ -11,8 +11,11 @@ import { createContext, useContext } from "react";
     addTodo: (todo) => {},
     updateTodo: (id, todo) => {},
     deleteTodo: (id) => {},
-    toggleCompleted: (id) => {} 
-})
+    toggleCompleted: (id) => {},
+   themeMode: "light",
+   darkMode: () => {},
+   lightMode: () => {},
+});
 
  export const useTodo = () => {
    return useContext(TodoContext)

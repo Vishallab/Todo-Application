@@ -19,7 +19,7 @@ export default function Todolist({todo}) {
 
 
     return (
-        <div className={`w-3/4 flex m-auto mt-3 h-10 bg-white border-2 border-white rounded-xl ${
+        <div className={`w-3/4 flex m-auto mt-3 h-10 bg-blue-700 border-2 border-blue-500 rounded-xl dark:bg-white dark:border-white ${
             todo.completed ? "bg-[#c6e9a7]" : "bg-[#ccbed7]"}`}>
 
             <input
