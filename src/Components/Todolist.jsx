@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import { useTodo } from "../Context/TodoContext";
+import { useTodo } from "./Context/TodoContext.js";
+//i added this .JS 
 
 
 export default function Todolist({todo}) {
