@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-import InputComp from './Components/InputComp'
-import Todolist from './Components/Todolist'
-import { TodoProvider } from './Context/TodoContext'
+import InputComp from 'Components/InputComp'
+import Todolist from 'Components/Todolist'
+import { TodoProvider } from 'Context/TodoContext'
 
 function App() {
   const [todo, setTodo] = useState([])
