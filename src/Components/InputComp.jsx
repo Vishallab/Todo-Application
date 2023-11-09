@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import { useTodo } from "../Context/TodoContext";
+import { useTodo } from "./Context/TodoContext";
 
 export default function InputComp() {
      const [todos, setTodos] = useState("")
